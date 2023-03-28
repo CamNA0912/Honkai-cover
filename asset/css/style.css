@@ -29,17 +29,23 @@ html {
 #nav {
 }
 
-#nav #subnav {
+#nav .subnav {
   position: absolute;
   background-color: #040b26;
+  list-style-type: none;
+  display: none;
 }
 
-#nav #subnav a {
-  background-color: #040b26;
+#nav .subnav li:hover {
+  color: #01d6fe;
+  background-color: #282f3f;
+}
+
+#nav > li {
+  display: inline-block;
 }
 
 #nav li {
-  display: inline-block;
   position: relative;
 }
 
@@ -52,17 +58,30 @@ html {
   display: inline-block;
 }
 
+#nav > li > a {
+  text-transform: uppercase;
+}
+
+#nav li:hover .subnav {
+  display: block;
+}
+
+#nav .subnav li:hover a,
 #nav > li:hover > a {
   color: #01d6fe;
   background-color: #282f3f;
 }
 
-#subnav {
+#nav .subnav a {
+  padding: 0 12px;
+}
+
+.subnav li {
+  width: 150px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0, 3);
 }
 
 #slider {
-  min-height: 500px;
-  background-color: #333;
 }
 
 #content {
