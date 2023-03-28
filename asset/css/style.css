@@ -30,8 +30,12 @@ html {
 }
 
 #nav #subnav {
-  display: block;
   position: absolute;
+  background-color: #040b26;
+}
+
+#nav #subnav a {
+  background-color: #040b26;
 }
 
 #nav li {
@@ -48,7 +52,7 @@ html {
   display: inline-block;
 }
 
-#nav li:hover a {
+#nav > li:hover > a {
   color: #01d6fe;
   background-color: #282f3f;
 }
