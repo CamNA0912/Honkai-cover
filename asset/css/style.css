@@ -30,26 +30,35 @@ html {
 }
 
 #nav #subnav {
-  display: none;
+  display: block;
+  position: absolute;
 }
 
 #nav li {
   display: inline-block;
-  padding: 0 20px;
-  line-height: 65px;
+  position: relative;
 }
 
 #nav li a {
   text-decoration: none;
   color: #fff;
   font-weight: 600;
+  padding: 0 20px;
+  line-height: 65px;
+  display: inline-block;
 }
 
-#nav li a:hover {
+#nav li:hover a {
   color: #01d6fe;
+  background-color: #282f3f;
 }
 
-#nav #slider {
+#subnav {
+}
+
+#slider {
+  min-height: 500px;
+  background-color: #333;
 }
 
 #content {
