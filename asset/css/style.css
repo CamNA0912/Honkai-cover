@@ -31,6 +31,9 @@ html {
 
 #nav .subnav {
   position: absolute;
+  min-width: 160px;
+  top: 100%;
+  left: 0;
   background-color: #040b26;
   list-style-type: none;
   display: none;
