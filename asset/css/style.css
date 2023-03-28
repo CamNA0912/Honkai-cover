@@ -94,6 +94,11 @@ html {
   padding: 0 24px;
 }
 
+#header .account-btn:hover {
+  background-color: #282f3f;
+  cursor: pointer;
+}
+
 #header .account-icon {
   line-height: 65px;
   color: #fff;
