@@ -28,6 +28,8 @@ html {
   top: 0;
   left: 0;
   right: 0;
+  /* Làm phần header nổi lên khi cho slider thuộc tính relative */
+  z-index: 2;
 }
 
 #nav {
@@ -113,7 +115,29 @@ html {
 }
 
 #slider {
+  position: relative;
   margin-top: 65px;
+  padding-top: 50%;
+  background: url("/asset/img/slider/Kiana-version.jpg") top center / cover
+    no-repeat;
+}
+
+#slider .text-content {
+  position: absolute;
+  bottom: 47px;
+  /* Cách 1 (căn giữa)*/
+  /* left: 50%;
+  right: 50%;
+  transform: translateX(-50%, -50%); */
+  /* Cách 2  131 -> 133*/
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 32px;
+  font-weight: 800;
+}
+
+#slider .text-heading {
 }
 
 #content {
