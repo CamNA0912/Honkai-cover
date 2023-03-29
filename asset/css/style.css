@@ -18,6 +18,10 @@ html {
     3. Màu sắc
     4.Kiểu dáng */
 
+.clear {
+  clear: both;
+}
+
 .text-white {
   color: #fff !important;
 }
@@ -118,6 +122,8 @@ html {
   font-size: 30px;
 }
 
+/* Slider */
+
 #slider {
   position: relative;
   margin-top: 65px;
@@ -172,13 +178,6 @@ html {
   font-family: tahoma, Arial;
 }
 
-#content .about-text-the-gioi-quan {
-  font-family: tahoma, Arial;
-  font-size: 18px;
-  padding: 5px 0;
-  line-height: 1.6; /* Cách dòng trong paragraph */
-}
-
 #content .the-gioi-quan {
   position: relative;
 }
@@ -231,5 +230,70 @@ html {
   margin-top: -3px;
 }
 
+/* Emotion */
+
+.emotion-list {
+  margin: 32px -8px 0;
+}
+
+.emotion-item {
+  float: left;
+  width: 33.33333%;
+  padding: 0 8px;
+}
+
+.emotion-img {
+  width: 100%;
+  display: block;
+}
+
+.emotion-img:hover {
+  opacity: 0.6;
+}
+
+.emotion-body {
+  background-color: #ddd;
+  padding: 16px;
+  font-size: 15px;
+}
+
+.emotion-heading {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.emotion-time {
+  margin-top: 15px;
+  color: #757575;
+}
+
+.emotion-desc {
+  margin-top: 15px;
+  line-height: 1.4;
+}
+
+.emotion-view-btn {
+  text-decoration: none;
+  color: #fff;
+  background-color: #000;
+  padding: 8px 16px;
+  display: inline-block;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+.emotion-view-btn:hover {
+  background-color: #ccc;
+  font-weight: 600;
+  color: #000;
+}
+
+/* Media section */
+
+.background-media {
+  background: url(/asset/img/slider/background-media.png);
+}
+
 #footer {
+  background: url(/asset//img/slider/footer-background.png);
 }
