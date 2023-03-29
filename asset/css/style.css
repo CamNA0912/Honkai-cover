@@ -22,11 +22,16 @@ html {
 }
 
 #header {
+  position: fixed;
   height: 65px;
   background-color: #040b26;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 #nav {
+  /* Làm phần navigation ko chiếm hết phần header */
   display: inline-block;
 }
 
@@ -82,7 +87,7 @@ html {
 
 .subnav li {
   width: 150px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0, 3);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 #nav .nav-arrow-down {
@@ -90,6 +95,7 @@ html {
 }
 
 #header .account-btn {
+  /* Làm icon sao cho vào bên phải của header và tăng kích thước = padding */
   float: right;
   padding: 0 24px;
 }
@@ -100,6 +106,7 @@ html {
 }
 
 #header .account-icon {
+  /* Căn giữa = lineheight */
   line-height: 65px;
   color: #fff;
   font-size: 30px;
