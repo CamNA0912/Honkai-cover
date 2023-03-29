@@ -18,6 +18,10 @@ html {
     3. Màu sắc
     4.Kiểu dáng */
 
+.text-white {
+  color: #fff !important;
+}
+
 #main {
 }
 
@@ -149,6 +153,10 @@ html {
 
 #content {
 }
+/* the-gioi-quan section */
+#content .the-gioi-quan {
+  background: url(/asset/img/slider/background-the-gioi-quan.png);
+}
 
 #content .content-section {
   width: 780px;
@@ -164,6 +172,17 @@ html {
   font-family: tahoma, Arial;
 }
 
+#content .about-text-the-gioi-quan {
+  font-family: tahoma, Arial;
+  font-size: 18px;
+  padding: 5px 0;
+  line-height: 1.6; /* Cách dòng trong paragraph */
+}
+
+#content .the-gioi-quan {
+  position: relative;
+}
+
 #content .about-text {
   font-family: tahoma, Arial;
   font-size: 18px;
@@ -173,6 +192,43 @@ html {
 
 #content .banner-item {
   margin-top: 48px;
+}
+
+/* Valkyrie section */
+.valkyrie-section {
+  background: url(/asset/img/slider/background-valkyrie.png);
+}
+
+.tickets-list {
+  background-color: #fff;
+  margin-top: 40px;
+}
+
+.tickets-list li {
+  color: #757575;
+  padding: 11px 16px;
+  font-size: 15px;
+  border-bottom: 1px solid #ddd;
+  list-style: none;
+}
+
+.tickets-list .sold-out {
+  background-color: #f44336;
+  color: #fff;
+  padding: 3px 4px;
+  margin-left: 16px;
+}
+
+.tickets-list .quantity {
+  background-color: #000;
+  float: right;
+  width: 24px;
+  height: 24px;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 24px;
+  margin-top: -3px;
 }
 
 #footer {
