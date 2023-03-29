@@ -22,16 +22,24 @@ html {
 }
 
 #header {
+  position: fixed;
   height: 65px;
   background-color: #040b26;
+  top: 0;
+  left: 0;
+  right: 0;
+  /* Làm phần header nổi lên khi cho slider thuộc tính relative */
+  z-index: 2;
 }
 
 #nav {
+  /* Làm phần navigation ko chiếm hết phần header */
+  display: inline-block;
 }
 
 #nav .subnav {
   position: absolute;
-  min-width: 160px;
+  min-width: 150px;
   top: 100%;
   left: 0;
   background-color: #040b26;
@@ -81,10 +89,55 @@ html {
 
 .subnav li {
   width: 150px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0, 3);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#nav .nav-arrow-down {
+  font-size: 12px;
+}
+
+#header .account-btn {
+  /* Làm icon sao cho vào bên phải của header và tăng kích thước = padding */
+  float: right;
+  padding: 0 24px;
+}
+
+#header .account-btn:hover {
+  background-color: #282f3f;
+  cursor: pointer;
+}
+
+#header .account-icon {
+  /* Căn giữa = lineheight */
+  line-height: 65px;
+  color: #fff;
+  font-size: 30px;
 }
 
 #slider {
+  position: relative;
+  margin-top: 65px;
+  padding-top: 50%;
+  background: url("/asset/img/slider/Kiana-version.jpg") top center / cover
+    no-repeat;
+}
+
+#slider .text-content {
+  position: absolute;
+  bottom: 47px;
+  /* Cách 1 (căn giữa)*/
+  /* left: 50%;
+  right: 50%;
+  transform: translateX(-50%, -50%); */
+  /* Cách 2  131 -> 133*/
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 32px;
+  font-weight: 800;
+}
+
+#slider .text-heading {
 }
 
 #content {
