@@ -139,6 +139,12 @@ html {
 
 #slider .text-heading {
   font-family: tahoma, Arial;
+  /* absolute làm cho btn-download có thể di chuyển và gộp vào với text-heading */
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 25px;
+  color: #000;
 }
 
 #content {
@@ -163,6 +169,10 @@ html {
   font-size: 18px;
   padding: 5px 0;
   line-height: 1.6; /* Cách dòng trong paragraph */
+}
+
+#content .banner-item {
+  margin-top: 48px;
 }
 
 #footer {
