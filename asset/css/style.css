@@ -319,3 +319,65 @@ html {
   color: #fff;
   padding: 55px 0 20px;
 }
+
+#footer .container {
+  box-sizing: border-box;
+  padding: 49px 29px 0;
+  height: 438px;
+  width: 1280px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  /* Có thể css trong 1 vị trí cụ thể */
+}
+
+#footer .social-media-icon {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#footer .icon-item {
+  flex: none;
+  height: 85px;
+  font-size: 40px;
+  color: #3980de;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0 12px 0;
+}
+
+#footer .split-box {
+  margin-top: 42px;
+  display: flex;
+}
+
+#footer .split-box-item {
+  font-size: 20px;
+  padding: 0 13px;
+  color: #535353;
+  float: left;
+}
+
+#footer .msg-container {
+  display: flex;
+  justify-content: space-between;
+  width: 996px;
+  margin-top: 43px;
+}
+
+#footer .msg-item {
+  text-align: left;
+  width: 300px;
+}
+
+#footer .heading-msg-item {
+  line-height: 1.6;
+  margin: 0 0 9px 1px;
+}
+
+#footer .paragraph-msg-item {
+  font-size: 12px;
+  margin-bottom: 12px;
+}
