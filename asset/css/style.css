@@ -161,7 +161,8 @@ html {
 }
 /* the-gioi-quan section */
 #content .the-gioi-quan {
-  background: url(/asset/img/slider/background-the-gioi-quan.png);
+  background: url(/asset/img/slider/background-the-gioi-quan.png) center top /
+    cover no-repeat;
 }
 
 #content .content-section {
@@ -195,7 +196,8 @@ html {
 
 /* Valkyrie section */
 .valkyrie-section {
-  background: url(/asset/img/slider/background-valkyrie.png);
+  background: url(/asset/img/slider/background-valkyrie.png) center top / cover
+    no-repeat;
 }
 
 .tickets-list {
@@ -291,9 +293,29 @@ html {
 /* Media section */
 
 .background-media {
-  background: url(/asset/img/slider/background-media.png);
+  background: url(/asset/img/slider/background-media.png) center top / cover
+    no-repeat;
 }
 
 #footer {
-  background: url(/asset//img/slider/footer-background.png);
+  position: relative;
+  background: url(/asset//img/slider/footer-background.png) center top / cover
+    no-repeat;
+  height: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#footer .section-heading {
+  text-align: center;
+  font-size: 48px;
+  font-family: tahoma, Arial;
+  width: 100%;
+  color: #fff;
+  padding: 55px 0 20px;
 }
