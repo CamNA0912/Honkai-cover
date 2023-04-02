@@ -18,6 +18,14 @@ html {
     3. Màu sắc
     4.Kiểu dáng */
 
+.clear {
+  clear: both;
+}
+
+.text-white {
+  color: #fff !important;
+}
+
 #main {
 }
 
@@ -114,6 +122,8 @@ html {
   font-size: 30px;
 }
 
+/* Slider */
+
 #slider {
   position: relative;
   margin-top: 65px;
@@ -138,10 +148,392 @@ html {
 }
 
 #slider .text-heading {
+  font-family: tahoma, Arial;
+  /* absolute làm cho btn-download có thể di chuyển và gộp vào với text-heading */
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 25px;
+  color: #000;
+}
+
+#banner {
+  background-color: #000;
+  height: 270px;
+  padding: 18px 0;
+  font-size: 18px;
+  margin: 0 auto;
+}
+
+#banner .banner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+}
+
+#banner .banner-item {
+  width: 308px;
+  height: 210px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  padding-left: 8px;
+}
+
+#banner .banner-img-item {
+  display: block;
+  width: 100%;
+  height: 154px;
+}
+
+#banner .title {
+  width: 100%;
+  height: 56px;
+  background: #3e4963;
+  position: absolute;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+}
+
+#banner .title-content {
+  overflow: hidden;
+  color: #fff;
+  font-size: 18px;
+  font-family: tahoma, Arial;
 }
 
 #content {
 }
+/* the-gioi-quan section */
+#content .the-gioi-quan {
+  background: url(/asset/img/slider/background-the-gioi-quan.png) center top /
+    cover no-repeat;
+}
+
+#content .content-section {
+  width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 55px 0;
+}
+
+#content .section-heading {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 48px;
+  font-family: tahoma, Arial;
+}
+
+#content .the-gioi-quan {
+  position: relative;
+}
+
+#content .about-text {
+  font-family: tahoma, Arial;
+  font-size: 18px;
+  padding: 5px 0;
+  line-height: 1.6; /* Cách dòng trong paragraph */
+}
+
+#content .banner-item {
+  margin-top: 48px;
+}
+
+/* Valkyrie section */
+.valkyrie-section {
+  background: url(/asset/img/slider/background-valkyrie.png) center top / cover
+    no-repeat;
+}
+
+.tickets-list {
+  background-color: #fff;
+  margin-top: 40px;
+}
+
+.tickets-list li {
+  color: #757575;
+  padding: 11px 16px;
+  font-size: 15px;
+  border-bottom: 1px solid #ddd;
+  list-style: none;
+}
+
+.tickets-list .sold-out {
+  background-color: #f44336;
+  color: #fff;
+  padding: 3px 4px;
+  margin-left: 16px;
+}
+
+.tickets-list .quantity {
+  background-color: #000;
+  float: right;
+  width: 24px;
+  height: 24px;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 24px;
+  margin-top: -3px;
+}
+
+/* Emotion */
+
+.emotion-list {
+  margin: 32px -8px 0;
+}
+
+.emotion-item {
+  float: left;
+  width: 33.33333%;
+  padding: 0 8px;
+}
+
+.emotion-img {
+  width: 100%;
+  display: block;
+}
+
+.emotion-img:hover {
+  opacity: 0.6;
+}
+
+.emotion-body {
+  background-color: #ddd;
+  padding: 16px;
+  font-size: 15px;
+}
+
+.emotion-heading {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.emotion-time {
+  margin-top: 15px;
+  color: #757575;
+}
+
+.emotion-desc {
+  margin-top: 15px;
+  line-height: 1.4;
+}
+
+.emotion-view-btn {
+  text-decoration: none;
+  color: #fff;
+  background-color: #000;
+  padding: 8px 16px;
+  display: inline-block;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+.emotion-view-btn:hover {
+  background-color: #ccc;
+  font-weight: 600;
+  color: #000;
+}
+
+/* Media section */
+
+.background-media {
+  background: url(/asset/img/slider/background-media.png) center top / cover
+    no-repeat;
+}
 
 #footer {
+  position: relative;
+  background: url(/asset//img/slider/footer-background.png) center top / cover
+    no-repeat;
+  height: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#footer .section-heading {
+  text-align: center;
+  font-size: 48px;
+  font-family: tahoma, Arial;
+  width: 100%;
+  color: #fff;
+  padding: 55px 0 20px;
+}
+
+#footer .container {
+  box-sizing: border-box;
+  padding: 49px 29px 0;
+  height: 438px;
+  width: 1280px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  /* Có thể css trong 1 vị trí cụ thể */
+}
+
+#footer .social-media-icon {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#footer .icon-item {
+  flex: none;
+  height: 85px;
+  font-size: 40px;
+  color: #3980de;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0 12px 0;
+}
+
+#footer .icon-item:hover {
+  background-color: #fff;
+}
+
+#footer .split-box {
+  margin-top: 42px;
+  display: flex;
+}
+
+#footer .split-box-item {
+  font-size: 20px;
+  padding: 0 13px;
+  color: #535353;
+  float: left;
+}
+
+#footer .barrier {
+  color: #3980de;
+  display: flex;
+}
+
+#footer .msg-container {
+  display: flex;
+  justify-content: space-between;
+  width: 996px;
+  margin-top: 43px;
+}
+
+#footer .msg-item {
+  text-align: left;
+  width: 300px;
+}
+
+#footer .heading-msg-item {
+  line-height: 1.6;
+  margin: 0 0 9px 1px;
+  border-left: 3px solid #01d6fe;
+  padding-left: 5px;
+}
+
+#footer .paragraph-msg-item {
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  display: none;
+}
+
+.modal-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #fff;
+  padding: 12px;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.modal-container {
+  background-color: #fff;
+  width: 900px;
+  max-width: calc(100% - 32px);
+  min-height: 200px;
+  position: relative;
+}
+
+.modal-header {
+  background-color: #009688;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: #fff;
+}
+
+.modal-heading-icon {
+  margin-right: 16px;
+}
+
+.modal-body {
+  padding: 16px;
+}
+
+.modal-label {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+.modal-input {
+  border: 1px solid #ccc;
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  margin-bottom: 24px;
+}
+
+.modal-label {
+}
+
+#buy-tickets {
+  background-color: #009688;
+  border: none;
+  color: #fff;
+  width: 100%;
+  font-size: 15px;
+  text-transform: uppercase;
+  padding: 18px;
+  cursor: pointer;
+}
+
+#buy-tickets:hover {
+  opacity: 0.9;
+}
+
+.modal-footer {
+  padding: 16px;
+  text-align: right;
+}
+
+.modal-help a {
+  color: #2196f3;
 }
