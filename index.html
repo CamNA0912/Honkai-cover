@@ -311,7 +311,7 @@
         </div>
       </div>
       <div class="modal js-hoyolab">
-        <div class="modal-container">
+        <div class="modal-container js-modal-container">
           <div class="modal-close js-hoyolab-close">
             <i class="ti-close"></i>
           </div>
@@ -357,6 +357,7 @@
     <script>
       const hoyolabBtns = document.querySelectorAll(".js-hoyolab-btn");
       const modal = document.querySelector(".js-hoyolab");
+      const modalContainer = document.querySelector(".js-modal-container");
       const modalClose = document.querySelector(".js-hoyolab-close");
 
       // Hàm hiển thị
@@ -365,7 +366,7 @@
       }
       // Hàm ẩn
       function closeHoyolab() {
-        modal.classList.remove("modal");
+        modal.classList.remove("open");
       }
 
       // Lặp của 3 btn và nghe click
@@ -375,6 +376,12 @@
 
       // Nghe hành động click để active
       modalClose.addEventListener("click", closeHoyolab);
+
+      modal.addEventListener("click", closeHoyolab);
+
+      modalContainer.addEventListener("click", function (event) {
+        event.stopPropagation();
+      });
     </script>
   </body>
 </html>
