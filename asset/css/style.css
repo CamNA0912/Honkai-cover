@@ -157,6 +157,34 @@ html {
   color: #000;
 }
 
+#banner {
+  background-color: #000;
+  height: 270px;
+  padding: 18px 0;
+  font-size: 18px;
+  margin: 0 auto;
+}
+
+#banner .banner-container {
+  display: flex;
+  justify-content: center;
+}
+
+#banner .banner-item {
+  width: 308px;
+  height: 210px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  padding-left: 18px;
+}
+
+#banner .banner-img-item {
+  display: block;
+  width: 308px;
+  height: 154px;
+}
+
 #content {
 }
 /* the-gioi-quan section */
