@@ -172,7 +172,9 @@
                   <p class="emotion-desc">
                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                   </p>
-                  <a href="" class="emotion-view-btn">HoYoLab</a>
+                  <button class="emotion-view-btn js-hoyolab-btn">
+                    HoYoLab
+                  </button>
                 </div>
               </div>
               <!-- item 2 -->
@@ -188,7 +190,9 @@
                   <p class="emotion-desc">
                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                   </p>
-                  <a href="" class="emotion-view-btn">HoYoLab</a>
+                  <button class="emotion-view-btn js-hoyolab-btn">
+                    HoYoLab
+                  </button>
                 </div>
               </div>
               <!-- item 3 -->
@@ -204,7 +208,9 @@
                   <p class="emotion-desc">
                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                   </p>
-                  <a href="" class="emotion-view-btn">HoYoLab</a>
+                  <button class="emotion-view-btn js-hoyolab-btn">
+                    HoYoLab
+                  </button>
                 </div>
               </div>
               <div class="clear"></div>
@@ -304,9 +310,9 @@
           </div>
         </div>
       </div>
-      <div class="modal open">
+      <div class="modal js-hoyolab">
         <div class="modal-container">
-          <div class="modal-close">
+          <div class="modal-close js-hoyolab-close">
             <i class="ti-close"></i>
           </div>
           <header class="modal-header">
@@ -347,5 +353,28 @@
         </div>
       </div>
     </div>
+
+    <script>
+      const hoyolabBtns = document.querySelectorAll(".js-hoyolab-btn");
+      const modal = document.querySelector(".js-hoyolab");
+      const modalClose = document.querySelector(".js-hoyolab-close");
+
+      // Hàm hiển thị
+      function showHoyolab() {
+        modal.classList.add("open");
+      }
+      // Hàm ẩn
+      function closeHoyolab() {
+        modal.classList.remove("modal");
+      }
+
+      // Lặp của 3 btn và nghe click
+      for (const hoyolabBtn of hoyolabBtns) {
+        hoyolabBtn.addEventListener("click", showHoyolab);
+      }
+
+      // Nghe hành động click để active
+      modalClose.addEventListener("click", closeHoyolab);
+    </script>
   </body>
 </html>
