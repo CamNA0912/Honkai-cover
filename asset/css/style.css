@@ -168,6 +168,14 @@ html {
 #banner .banner-container {
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
 }
 
 #banner .banner-item {
@@ -176,13 +184,30 @@ html {
   position: relative;
   cursor: pointer;
   overflow: hidden;
-  padding-left: 18px;
+  padding-left: 8px;
 }
 
 #banner .banner-img-item {
   display: block;
-  width: 308px;
+  width: 100%;
   height: 154px;
+}
+
+#banner .title {
+  width: 100%;
+  height: 56px;
+  background: #3e4963;
+  position: absolute;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+}
+
+#banner .title-content {
+  overflow: hidden;
+  color: #fff;
+  font-size: 18px;
+  font-family: tahoma, Arial;
 }
 
 #content {
