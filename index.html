@@ -222,19 +222,62 @@
         <div class="background-media">
           <div class="content-section">
             <h2 class="section-heading">Khu trải nghiệm</h2>
-            <p class="about-text">
-              Valkyrie, chiến sĩ của tổ chức mạnh nhất địa cầu【Destiny】. Vóc
-              dáng nhìn có vẻ yếu đuối của họ lại bao hàm gien chống lại nguồn
-              loạn nguyên thủy.
-            </p>
-            <p class="about-text">
-              Honkai, hóa thân của hỗn loạn, mục tiêu cuối cùng của chúng là hủy
-              diệt văn minh nhân loại.
-            </p>
-            <p class="about-text">
-              Và bạn, chính là thuyền trưởng của Valkyrie. Bạn phải cùng họ đối
-              mặt với kẻ địch lớn nhất của nhân loại.
-            </p>
+            <div class="media-content-section">
+              <div class="media-content-actions">
+                <div class="media-btn is-active">Hình nền</div>
+                <div class="media-btn">Video</div>
+              </div>
+              <div class="media-container">
+                <div>
+                  <img
+                    src="asset/img/media-content/hoyoverse1.png"
+                    alt="hoyoverse"
+                  />
+                </div>
+                <div>
+                  <img
+                    src="asset/img/media-content/hoyoverse2.png"
+                    alt="hoyoverse"
+                  />
+                </div>
+                <div>
+                  <img
+                    src="asset/img/media-content/hoyoverse3.png"
+                    alt="hoyoverse"
+                  />
+                </div>
+                <div>
+                  <img
+                    src="asset/img/media-content/hoyoverse4.png"
+                    alt="hoyoverse"
+                  />
+                </div>
+                <div>
+                  <img
+                    src="asset/img/media-content/hoyoverse5.png"
+                    alt="hoyoverse"
+                  />
+                </div>
+                <div>
+                  <img
+                    src="asset/img/media-content/hoyoverse6.png"
+                    alt="hoyoverse"
+                  />
+                </div>
+                <div>
+                  <img
+                    src="asset/img/media-content/hoyoverse7.png"
+                    alt="hoyoverse"
+                  />
+                </div>
+                <div>
+                  <img
+                    src="asset/img/media-content/hoyoverse8.png"
+                    alt="hoyoverse"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -360,14 +403,13 @@
       const modalContainer = document.querySelector(".js-modal-container");
       const modalClose = document.querySelector(".js-hoyolab-close");
 
-      // Hàm hiển thị
+      // Hàm hiển thị (Thêm class open vào modal)
       function showHoyolab() {
         modal.classList.add("open");
       }
-      // Hàm ẩn
-      function closeHoyolab() {
-        modal.classList.remove("open");
-      }
+      // Hàm ẩn (Gỡ class open khỏi modal)
+      function closeHoyolab() {}
+      modal.classList.remove("open");
 
       // Lặp của 3 btn và nghe click
       for (const hoyolabBtn of hoyolabBtns) {
@@ -375,10 +417,13 @@
       }
 
       // Nghe hành động click để active
-      modalClose.addEventListener("click", closeHoyolab);
+      for (const hoyolabBtn of hoyolabBtns) {
+        hoyolabBtn.addEventListener("click", closeHoyolab);
+      }
 
       modal.addEventListener("click", closeHoyolab);
 
+      // Làm cho 1 vùng nhất địn khi click có thể ẩn modal form và ngăn không cho khi click vào modal sẽ ẩn đi
       modalContainer.addEventListener("click", function (event) {
         event.stopPropagation();
       });

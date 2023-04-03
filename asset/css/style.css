@@ -224,6 +224,66 @@ html {
   padding: 55px 0;
 }
 
+#content .media-content-section {
+  width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 43px;
+  height: 490px;
+  margin-left: -250px;
+}
+
+#content .media-content-actions {
+  position: absolute;
+  right: 0;
+  top: 43;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  color: #060a25;
+  font-weight: bold;
+  text-align: center;
+}
+
+#content .media-btn.is-active {
+  background-image: url(/asset/img/media-content/frame-active.png);
+}
+
+#content .media-btn {
+  width: 309px;
+  height: 65px;
+  line-height: 65px;
+  background: url(/asset/img/media-content/frame-img.png);
+  background-size: 100%;
+  cursor: pointer;
+}
+
+#content .media-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+#content .media-container > div:first-child {
+  width: 480px;
+  height: 270px;
+}
+
+#content .media-container > div {
+  width: 256px;
+  height: 145px;
+  margin-right: 8px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  border: 3px solid transparent;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
 #content .section-heading {
   text-align: center;
   margin-bottom: 30px;
