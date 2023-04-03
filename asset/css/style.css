@@ -18,12 +18,64 @@ html {
     3. Màu sắc
     4.Kiểu dáng */
 
+/* Common */
 .clear {
   clear: both;
 }
 
 .text-white {
   color: #fff !important;
+}
+
+.row {
+  margin-left: -8px;
+}
+
+.row::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.col {
+  float: left;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.col-half {
+  width: 50%;
+}
+
+.col-full {
+  width: 100%;
+}
+
+.col-third {
+  width: 33.33333%;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.mt-8 {
+  margin-top: 8px !important;
+}
+
+.mt-16 {
+  margin-top: 16px !important;
+}
+
+.m-12 {
+  margin-top: 12px !important;
+  margin-bottom: 12px !important;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #main {
@@ -245,6 +297,29 @@ html {
   text-align: center;
 }
 
+#content .show-more {
+  position: absolute;
+  width: 200px;
+  height: 60px;
+  border: 1px solid #060a25;
+  right: 11px;
+  bottom: 97px;
+  font-size: 24px;
+  color: #060a25;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#content .show-more span {
+  width: 42px;
+  height: 12px;
+  background: url(/asset/img/media-content/arrow-left.png) no-repeat;
+  background-size: 100% 100%;
+  margin-left: 8px;
+}
+
 #content .media-btn.is-active {
   background-image: url(/asset/img/media-content/frame-active.png);
 }
@@ -347,13 +422,12 @@ html {
 /* Emotion */
 
 .emotion-list {
-  margin: 32px -8px 0;
+  margin-top: 32px;
+  margin-bottom: 48px;
 }
 
 .emotion-item {
-  float: left;
   width: 33.33333%;
-  padding: 0 8px;
 }
 
 .emotion-img {
@@ -407,6 +481,39 @@ html {
 .background-media {
   background: url(/asset/img/slider/background-media.png) center top / cover
     no-repeat;
+}
+
+/* Contact form */
+.contact-content {
+  margin-top: 48px;
+}
+
+.contact-info {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.contact-info i[class*="ti-"] {
+  width: 35px;
+  display: inline-block;
+}
+
+.contact-form {
+  font-size: 15px;
+}
+
+.contact-form .form-control {
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.contact-form .form-submit-btn {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #000;
+  padding: 10px 16px;
+  float: right;
 }
 
 #footer {
@@ -503,6 +610,38 @@ html {
 #footer .paragraph-msg-item {
   font-size: 12px;
   margin-bottom: 12px;
+}
+
+.sub-footer {
+  width: 100%;
+  height: 230px;
+  background-color: #000;
+}
+
+.sub-footer .content-section {
+  width: 800px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 43px;
+  height: 230px;
+  padding: 30px 0 40px 0;
+}
+
+.sub-footer .mini-logo img {
+  width: 132px;
+  height: 67px;
+}
+
+.sub-footer .logo img {
+  width: 470px;
+  height: 57px;
+}
+
+.content-section .about-text .footer-link {
+  text-decoration: none;
+  margin: 10px;
+  color: #bbb;
+  font-size: 12px;
 }
 
 .modal {

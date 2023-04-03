@@ -159,8 +159,8 @@
             </ul> -->
 
             <!-- Emotion -->
-            <div class="emotion-list">
-              <div class="emotion-item">
+            <div class="row emotion-list">
+              <div class="col col-third">
                 <img
                   src="/asset/img/slider/quicksand-happy.png"
                   alt="quicksand-happy"
@@ -178,7 +178,7 @@
                 </div>
               </div>
               <!-- item 2 -->
-              <div class="emotion-item">
+              <div class="col col-third">
                 <img
                   src="/asset/img/slider/quicksand-sadness.png"
                   alt="quicksand-happy"
@@ -196,7 +196,7 @@
                 </div>
               </div>
               <!-- item 3 -->
-              <div class="emotion-item">
+              <div class="col col-third">
                 <img
                   src="/asset/img/slider/quicksansand-scare.png"
                   alt="quicksand-happy"
@@ -213,7 +213,6 @@
                   </button>
                 </div>
               </div>
-              <div class="clear"></div>
             </div>
           </div>
         </div>
@@ -226,6 +225,10 @@
               <div class="media-content-actions">
                 <div class="media-btn is-active">Hình nền</div>
                 <div class="media-btn">Video</div>
+              </div>
+              <div class="show-more">
+                Nhiều hơn
+                <span></span>
               </div>
               <div class="media-container">
                 <div>
@@ -353,9 +356,81 @@
           </div>
         </div>
       </div>
-      <div class="modal js-hoyolab">
+      <!-- Sub-footer
+      1.logo  
+      2. link
+      3. logo p2 -->
+      <div class="sub-footer">
+        <div class="content-section">
+          <div class="mini-logo m-12 flex-center">
+            <img src="/asset/img/media-content/mini-logo.png" alt="mini-logo" />
+          </div>
+          <div class="about-text text-center m-12">
+            <a href="" class="footer-link">Chính Sách Bảo Mật </a>
+            <a href="" class="footer-link">Điều Khoản Người Dùng </a>
+            <a href="" class="footer-link">Giới Thiệu Công Ty </a>
+            <a href="" class="footer-link">Liên Hệ Chúng Tôi </a>
+          </div>
+
+          <div class="logo m-12 flex-center">
+            <img src="/asset/img/media-content/logo-name.png" alt="logo" />
+          </div>
+
+          <!-- <div class="row contact-content">
+            <div class="col col-half contact-info">
+              <p><i class="ti-location-pin"></i>Chicago, US</p>
+              <p><i class="ti-mobile"></i> Phone: +00 151515</p>
+              <p><i class="ti-email"></i> Email: mail@mail.com</p>
+            </div>
+            <div class="col col-half contact-form">
+              <form action="">
+                <div class="row">
+                  <div class="col col-half">
+                    <input
+                      required
+                      type="text"
+                      name=""
+                      id=""
+                      placeholder="Name"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="col col-half">
+                    <input
+                      required
+                      type="email"
+                      name=""
+                      id=""
+                      placeholder="Email"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="row mt-8">
+                  <div class="col col-full">
+                    <input
+                      required
+                      type="text"
+                      name=""
+                      id=""
+                      placeholder="Message"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <input
+                  class="form-submit-btn mt-16"
+                  type="submit"
+                  value="Send"
+                />
+              </form>
+            </div>
+          </div>-->
+        </div>
+      </div>
+      <div class="modal js-modal">
         <div class="modal-container js-modal-container">
-          <div class="modal-close js-hoyolab-close">
+          <div class="modal-close js-modal-close">
             <i class="ti-close"></i>
           </div>
           <header class="modal-header">
@@ -385,7 +460,7 @@
               placeholder="Enter email..."
             />
 
-            <button id="buy-tickets">
+            <button id="buy-tickets" class="js-modal-pay">
               Pay
               <i class="ti-check"></i>
             </button>
@@ -399,27 +474,32 @@
 
     <script>
       const hoyolabBtns = document.querySelectorAll(".js-hoyolab-btn");
-      const modal = document.querySelector(".js-hoyolab");
+      const modal = document.querySelector(".js-modal");
       const modalContainer = document.querySelector(".js-modal-container");
-      const modalClose = document.querySelector(".js-hoyolab-close");
+      const modalClose = document.querySelector(".js-modal-close");
+      const modalPay = document.querySelector(".js-modal-pay");
 
       // Hàm hiển thị (Thêm class open vào modal)
       function showHoyolab() {
         modal.classList.add("open");
       }
+
       // Hàm ẩn (Gỡ class open khỏi modal)
-      function closeHoyolab() {}
-      modal.classList.remove("open");
+      function closeHoyolab() {
+        modal.classList.remove("open");
+      }
+
+      function showPay() {
+        alert("Thanks");
+      }
 
       // Lặp của 3 btn và nghe click
       for (const hoyolabBtn of hoyolabBtns) {
         hoyolabBtn.addEventListener("click", showHoyolab);
       }
 
-      // Nghe hành động click để active
-      for (const hoyolabBtn of hoyolabBtns) {
-        hoyolabBtn.addEventListener("click", closeHoyolab);
-      }
+      // Nghe click để đóng form modal
+      modalClose.addEventListener("click", closeHoyolab);
 
       modal.addEventListener("click", closeHoyolab);
 
@@ -427,6 +507,8 @@
       modalContainer.addEventListener("click", function (event) {
         event.stopPropagation();
       });
+
+      modalPay.addEventListener("click", showPay);
     </script>
   </body>
 </html>
