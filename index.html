@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Honkai Impact 3</title>
     <link rel="stylesheet" href="/asset/css/style.css" />
+    <link rel="stylesheet" href="/asset/css/responsive.css" />
     <link
       rel="stylesheet"
       href=".//asset/fonts/themify-icons/themify-icons.css"
@@ -16,19 +17,19 @@
       <div id="header">
         <!-- Begin: nav -->
         <ul id="nav">
-          <li><a href="">Home</a></li>
-          <li><a href="">News</a></li>
-          <li><a href="">Valkyrie</a></li>
-          <li><a href="">HoYoLab</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#the-gioi-quan">News</a></li>
+          <li><a href="#valkyrie">Valkyrie</a></li>
+          <li><a href="#hoyolab">HoYoLab</a></li>
           <li>
-            <a href="">
+            <a href="#media">
               Media
               <i class="nav-arrow-down ti-angle-down"></i>
             </a>
             <ul class="subnav">
-              <li><a href="">Video</a></li>
-              <li><a href="">Wallpaper</a></li>
-              <li><a href="">Comic</a></li>
+              <li><a href="#">Video</a></li>
+              <li><a href="#">Wallpaper</a></li>
+              <li><a href="#">Comic</a></li>
             </ul>
           </li>
         </ul>
@@ -38,18 +39,16 @@
         <div class="account-btn">
           <i class="account-icon ti-user"></i>
         </div>
+        <div id="mobile-menu" class="mobile-menu-btn">
+          <i class="menu-icon ti-menu"></i>
+        </div>
         <!-- End: account -->
       </div>
       <div id="slider">
         <div class="text-content">
           <div class="btn-download">
-            <img
-              src="/asset/img/slider/slider-frame-for-btn.png"
-              alt="Download-btn"
-              class="download-btn"
-            />
+            <div class="text-heading">Tải ngay</div>
           </div>
-          <h2 class="text-heading">Tải ngay</h2>
         </div>
       </div>
       <!-- Banner section -->
@@ -111,7 +110,7 @@
           text-box
           banner
          -->
-        <div class="the-gioi-quan">
+        <div id="the-gioi-quan" class="the-gioi-quan">
           <div class="content-section width-1280">
             <h2 class="section-heading">Thế giới quan</h2>
             <div class="container-the-gioi-quan">
@@ -145,7 +144,7 @@
         </div>
 
         <!-- Valkyrie section -->
-        <div class="valkyrie-section">
+        <div id="valkyrie" class="valkyrie-section">
           <div class="content-section">
             <h2 class="section-heading text-white">Valkyrie</h2>
             <!-- <p class="about-text text-white">
@@ -229,7 +228,7 @@
         </div>
 
         <!-- Khu trải nghiệm section -->
-        <div class="background-media">
+        <div id="media" class="background-media">
           <div class="content-section">
             <h2 class="section-heading">Khu trải nghiệm</h2>
             <div class="media-content-section">
@@ -308,7 +307,7 @@
 
        -->
       <div id="footer">
-        <h2 class="section-heading">Liên Hệ Chúng Tôi</h2>
+        <h2 id="hoyolab" class="section-heading">Liên Hệ Chúng Tôi</h2>
         <div class="container">
           <!-- social-media section -->
           <div class="social-media-icon">
@@ -366,77 +365,81 @@
             </div>
           </div>
         </div>
-      </div>
-      <!-- Sub-footer
-      1.logo  
-      2. link
-      3. logo p2 -->
-      <div class="sub-footer">
-        <div class="content-section">
-          <div class="mini-logo m-12 flex-center">
-            <img src="/asset/img/media-content/mini-logo.png" alt="mini-logo" />
-          </div>
-          <div class="about-text text-center m-12">
-            <a href="" class="footer-link">Chính Sách Bảo Mật </a>
-            <a href="" class="footer-link">Điều Khoản Người Dùng </a>
-            <a href="" class="footer-link">Giới Thiệu Công Ty </a>
-            <a href="" class="footer-link">Liên Hệ Chúng Tôi </a>
-          </div>
-
-          <div class="logo m-12 flex-center">
-            <img src="/asset/img/media-content/logo-name.png" alt="logo" />
-          </div>
-
-          <!-- <div class="row contact-content">
-            <div class="col col-half contact-info">
-              <p><i class="ti-location-pin"></i>Chicago, US</p>
-              <p><i class="ti-mobile"></i> Phone: +00 151515</p>
-              <p><i class="ti-email"></i> Email: mail@mail.com</p>
+        <!-- Sub-footer
+        1.logo  
+        2. link
+        3. logo p2 -->
+        <div class="sub-footer">
+          <div class="content-section">
+            <div class="mini-logo m-12 flex-center">
+              <img
+                src="/asset/img/media-content/mini-logo.png"
+                alt="mini-logo"
+              />
             </div>
-            <div class="col col-half contact-form">
-              <form action="">
-                <div class="row">
-                  <div class="col col-half">
-                    <input
-                      required
-                      type="text"
-                      name=""
-                      id=""
-                      placeholder="Name"
-                      class="form-control"
-                    />
-                  </div>
-                  <div class="col col-half">
-                    <input
-                      required
-                      type="email"
-                      name=""
-                      id=""
-                      placeholder="Email"
-                      class="form-control"
-                    />
-                  </div>
-                </div>
-                <div class="row mt-8">
-                  <div class="col col-full">
-                    <input
-                      required
-                      type="text"
-                      name=""
-                      id=""
-                      placeholder="Message"
-                      class="form-control"
-                    />
-                  </div>
-                </div>
-                <input
-                  class="form-submit-btn mt-16"
-                  type="submit"
-                  value="Send"
-                />
-              </form>
+            <div class="about-text text-center m-12">
+              <a href="" class="footer-link">Chính Sách Bảo Mật </a>
+              <a href="" class="footer-link">Điều Khoản Người Dùng </a>
+              <a href="" class="footer-link">Giới Thiệu Công Ty </a>
+              <a href="" class="footer-link">Liên Hệ Chúng Tôi </a>
             </div>
-          </div>-->
+
+            <div class="logo m-12 flex-center">
+              <img src="/asset/img/media-content/logo-name.png" alt="logo" />
+            </div>
+
+            <!-- Contact section -->
+            <!-- <div class="row contact-content">
+              <div class="col col-half contact-info">
+                <p><i class="ti-location-pin"></i>Chicago, US</p>
+                <p><i class="ti-mobile"></i> Phone: +00 151515</p>
+                <p><i class="ti-email"></i> Email: mail@mail.com</p>
+              </div>
+              <div class="col col-half contact-form">
+                <form action="">
+                  <div class="row">
+                    <div class="col col-half">
+                      <input
+                        required
+                        type="text"
+                        name=""
+                        id=""
+                        placeholder="Name"
+                        class="form-control"
+                      />
+                    </div>
+                    <div class="col col-half">
+                      <input
+                        required
+                        type="email"
+                        name=""
+                        id=""
+                        placeholder="Email"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="row mt-8">
+                    <div class="col col-full">
+                      <input
+                        required
+                        type="text"
+                        name=""
+                        id=""
+                        placeholder="Message"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <input
+                    class="form-submit-btn mt-16"
+                    type="submit"
+                    value="Send"
+                  />
+                </form>
+              </div>
+            </div>-->
+          </div>
         </div>
       </div>
       <div class="modal js-modal">
@@ -483,6 +486,7 @@
       </div>
     </div>
 
+    <!-- Modal form -->
     <script>
       const hoyolabBtns = document.querySelectorAll(".js-hoyolab-btn");
       const modal = document.querySelector(".js-modal");
@@ -520,6 +524,31 @@
       });
 
       modalPay.addEventListener("click", showPay);
+    </script>
+
+    <!-- Navigation menu -->
+    <script>
+      var header = document.getElementById("header");
+      var mobileMenu = document.getElementById("mobile-menu");
+
+      // Open and close navigation menu
+      mobileMenu.onclick = function () {
+        var isClosed = header.clientHeight === 65;
+        if (isClosed) {
+          header.style.height = "auto";
+        } else {
+          header.style.height = "65px";
+        }
+      };
+
+      var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+      for (var i = 0; i < menuItems.length; i++) {
+        var menuItem = menuItems[i];
+
+        menuItem.onclick = function () {
+          header.style.height = null;
+        };
+      }
     </script>
   </body>
 </html>

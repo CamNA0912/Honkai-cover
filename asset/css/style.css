@@ -6,6 +6,7 @@
 }
 
 html {
+  scroll-behavior: smooth;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -18,6 +19,10 @@ html {
     3. Màu sắc
     4.Kiểu dáng */
 
+/* Responsive web 
+Pc: >= 1024px
+Tablet: >= 740 & <1024px
+Mobile: < 740px  */
 /* Common */
 .clear {
   clear: both;
@@ -94,26 +99,12 @@ html {
   right: 0;
   /* Làm phần header nổi lên khi cho slider thuộc tính relative */
   z-index: 2;
+  overflow: hidden;
 }
 
 #nav {
   /* Làm phần navigation ko chiếm hết phần header */
   display: inline-block;
-}
-
-#nav .subnav {
-  position: absolute;
-  min-width: 150px;
-  top: 100%;
-  left: 0;
-  background-color: #040b26;
-  list-style-type: none;
-  display: none;
-}
-
-#nav .subnav li:hover {
-  color: #01d6fe;
-  background-color: #282f3f;
 }
 
 #nav > li {
@@ -137,7 +128,22 @@ html {
   text-transform: uppercase;
 }
 
-#nav li:hover .subnav {
+#nav .subnav {
+  position: absolute;
+  min-width: 150px;
+  top: 100%;
+  left: 0;
+  background-color: #040b26;
+  list-style-type: none;
+  display: none;
+}
+
+#nav .subnav li:hover {
+  color: #01d6fe;
+  background-color: #282f3f;
+}
+
+#nav .subnav li:hover {
   display: block;
 }
 
@@ -160,17 +166,24 @@ html {
   font-size: 12px;
 }
 
+#header .mobile-menu-btn,
 #header .account-btn {
   /* Làm icon sao cho vào bên phải của header và tăng kích thước = padding */
   float: right;
   padding: 0 24px;
 }
 
+#header .mobile-menu-btn {
+  display: none;
+}
+
+#header .mobile-menu-btn:hover,
 #header .account-btn:hover {
   background-color: #282f3f;
   cursor: pointer;
 }
 
+#header .menu-icon,
 #header .account-icon {
   /* Căn giữa = lineheight */
   line-height: 65px;
@@ -190,27 +203,37 @@ html {
 
 #slider .text-content {
   position: absolute;
-  bottom: 47px;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
   /* Cách 1 (căn giữa)*/
   /* left: 50%;
   right: 50%;
   transform: translateX(-50%, -50%); */
   /* Cách 2  131 -> 133*/
-  width: 100%;
-  text-align: center;
-  color: #fff;
+  width: 420px;
+  height: 105px;
+  cursor: pointer;
+  color: #03040a;
   font-size: 32px;
   font-weight: 800;
 }
 
 #slider .text-heading {
-  font-family: tahoma, Arial;
   /* absolute làm cho btn-download có thể di chuyển và gộp vào với text-heading */
   position: absolute;
+  line-height: 105px;
   width: 100%;
-  text-align: center;
-  top: 25px;
-  color: #000;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../img/slider/slider-frame-for-btn.png) no-repeat;
+  background-size: cover;
+  color: #03040a;
+  font-size: 32px;
+  font-weight: 800;
+  font-family: tahoma, Arial;
 }
 
 #banner {
@@ -230,7 +253,6 @@ html {
   overflow: hidden;
   list-style: none;
   padding: 0;
-  z-index: 1;
 }
 
 #banner .banner-item {
@@ -275,7 +297,7 @@ html {
 }
 
 #content .content-section {
-  width: 780px;
+  width: 1280px;
   margin-left: auto;
   margin-right: auto;
   padding: 55px 0;
@@ -287,7 +309,6 @@ html {
   position: relative;
   padding-top: 43px;
   height: 490px;
-  margin-left: -250px;
 }
 
 #content .media-content-actions {
@@ -388,7 +409,6 @@ html {
   top: 0;
   background: url(/asset/img/slider/Frame-the-gioi-quan-section.png) no-repeat;
   background-size: cover;
-  z-index: 88;
 }
 
 #content .text-box {
@@ -507,6 +527,8 @@ html {
   display: inline-block;
   margin-top: 15px;
   font-weight: 600;
+  border: none;
+  cursor: pointer;
 }
 
 .emotion-view-btn:hover {
@@ -606,8 +628,9 @@ html {
   margin: 0 12px 0;
 }
 
-#footer .icon-item:hover {
-  background-color: #fff;
+#footer div .icon-item:hover {
+  background-color: #040b26;
+  color: #fff;
 }
 
 #footer .split-box {
@@ -786,4 +809,31 @@ html {
     opacity: 1;
     transform: translateY(0px);
   }
+}
+
+/* Mobile & Tablet: width <1024 */
+/* Mobile & Tablet */
+@media screen and (max-width: 63.9375em) {
+  /*Hiện Menu icon */
+  #header .mobile-menu-btn {
+    display: block;
+  }
+
+  /* Ẩn account icon */
+  #header .account-btn {
+    display: none;
+  }
+  #nav > li {
+    display: block;
+  }
+}
+
+/* Tablet >= 740px & < 1024 */
+/* Tablet */
+@media screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+}
+
+/* Mobile < 740px */
+/* Mobile */
+@media screen and (max-width: 46.1875em) {
 }
