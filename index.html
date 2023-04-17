@@ -494,7 +494,7 @@
       const modalClose = document.querySelector(".js-modal-close");
       const modalPay = document.querySelector(".js-modal-pay");
 
-      // Hàm hiển thị (Thêm class open vào modal)
+      // Hàm hiển thị
       function showHoyolab() {
         modal.classList.add("open");
       }
@@ -518,7 +518,6 @@
 
       modal.addEventListener("click", closeHoyolab);
 
-      // Làm cho 1 vùng nhất địn khi click có thể ẩn modal form và ngăn không cho khi click vào modal sẽ ẩn đi
       modalContainer.addEventListener("click", function (event) {
         event.stopPropagation();
       });
