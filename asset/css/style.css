@@ -309,7 +309,6 @@ Mobile: < 740px  */
   position: relative;
   padding-top: 43px;
   height: 490px;
-  margin-left: -250px;
 }
 
 #content .media-content-actions {
@@ -356,8 +355,6 @@ Mobile: < 740px  */
   cursor: pointer;
   border: 3px solid transparent;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   justify-content: center;
   overflow: hidden;
@@ -520,6 +517,29 @@ Mobile: < 740px  */
 .background-media {
   background: url(/asset/img/slider/background-media.png) center top / cover
     no-repeat;
+}
+
+.show-more {
+  position: absolute;
+  width: 200px;
+  height: 60px;
+  border: 1px solid #060a25;
+  right: 11px;
+  bottom: 97px;
+  font-size: 24px;
+  color: #060a25;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.show-more span {
+  width: 42px;
+  height: 12px;
+  background: url(../img/media-content/arrow-left.png) no-repeat;
+  background-size: 100% 100%;
+  margin-left: 8px;
 }
 
 /* Contact form */
