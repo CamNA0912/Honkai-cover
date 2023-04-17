@@ -108,7 +108,7 @@ Mobile: < 740px  */
 }
 
 #nav > li {
-  display: inline-block;
+  display: block;
 }
 
 #nav li {
@@ -138,12 +138,17 @@ Mobile: < 740px  */
   display: none;
 }
 
+#nav .subnav1 {
+  background-color: #fff;
+  color: #2196f3;
+}
+
 #nav .subnav li:hover {
   color: #01d6fe;
   background-color: #282f3f;
 }
 
-#nav .subnav li:hover {
+#nav .subnav:hover ~ li {
   display: block;
 }
 
@@ -166,15 +171,19 @@ Mobile: < 740px  */
   font-size: 12px;
 }
 
+#header .mobile-menu-btn {
+  /* Tránh thanh menu bị tràng ra ngoài */
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+}
+
 #header .mobile-menu-btn,
 #header .account-btn {
   /* Làm icon sao cho vào bên phải của header và tăng kích thước = padding */
   float: right;
   padding: 0 24px;
-}
-
-#header .mobile-menu-btn {
-  display: none;
 }
 
 #header .mobile-menu-btn:hover,
@@ -834,4 +843,11 @@ Mobile: < 740px  */
 /* Mobile < 740px */
 /* Mobile */
 @media screen and (max-width: 46.1875em) {
+  #nav {
+    display: block;
+  }
+
+  #nav > li:first-child {
+    display: inline-block;
+  }
 }
