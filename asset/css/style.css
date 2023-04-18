@@ -223,6 +223,33 @@ html {
   font-family: tahoma, Arial;
 }
 
+@keyframes rotateDots {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#slider .vongxoay {
+  position: absolute;
+  position: absolute;
+  width: 154px;
+  height: 131px;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+#slider .vongxoay img {
+  display: block;
+  width: 100%;
+  -webkit-animation: circle 5s infinite linear;
+  animation: rotateDots 5s infinite linear;
+}
+
 #banner {
   background-color: #000;
   height: 270px;
@@ -282,6 +309,11 @@ html {
   background: url(/asset/img/slider/background-the-gioi-quan.png) center top /
     cover no-repeat;
   position: relative;
+}
+
+#content .myslide img {
+  width: 1280px;
+  height: 524px;
 }
 
 #content .content-section {
