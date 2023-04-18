@@ -45,7 +45,12 @@
           <div class="btn-download">
             <div class="text-heading">Tải ngay</div>
           </div>
-          <!-- <div class="vongxoay"> <img src="./asset/img/slider/tải xuống.png" alt="hoyoverse"> </div> -->
+          <div class="vongxoay">
+            <img
+              src="./asset/img/slider/circle-animation.png"
+              alt="hoyoverse"
+            />
+          </div>
         </div>
       </div>
       <!-- Banner section -->
@@ -112,6 +117,41 @@
             <h2 class="section-heading">Thế giới quan</h2>
             <div class="container-the-gioi-quan">
               <div class="the-gioi-quan-box"></div>
+              <div class="myslide">
+                <img
+                  src="./asset/img/slider/mySlides1.png"
+                  alt=""
+                  class="mySlide"
+                />
+                <img
+                  src="./asset/img/slider/mySlide2.png"
+                  alt=""
+                  class="mySlide"
+                />
+                <img
+                  src="./asset/img/slider/mySlide3.png"
+                  alt=""
+                  class="mySlide"
+                />
+
+                <script>
+                  var myIndex = 0;
+                  carousel();
+                  function carousel() {
+                    var i;
+                    var x = document.getElementsByClassName("mySlide");
+                    for (i = 0; i < x.length; i++) {
+                      x[i].style.display = "none";
+                    }
+                    myIndex++;
+                    if (myIndex > x.length) {
+                      myIndex = 1;
+                    }
+                    x[myIndex - 1].style.display = "block";
+                    setTimeout(carousel, 6000); // Change image every 6 seconds
+                  }
+                </script>
+              </div>
               <div class="text-box">
                 <p class="about-text">
                   Valkyrie, chiến sĩ của tổ chức mạnh nhất địa cầu【Destiny】.
