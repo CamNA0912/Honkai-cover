@@ -101,6 +101,8 @@ html {
   display: inline-block;
 }
 
+/* Navigation và sub navigation menu */
+
 #nav .subnav {
   position: absolute;
   min-width: 150px;
@@ -178,6 +180,59 @@ html {
   font-size: 30px;
 }
 
+/* banner section */
+#banner {
+  background-color: #000;
+  height: 270px;
+  padding: 18px 0;
+  font-size: 18px;
+  margin: 0 auto;
+}
+
+#banner .banner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+}
+
+#banner .banner-item {
+  width: 308px;
+  height: 210px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  padding-left: 8px;
+}
+
+#banner .banner-img-item {
+  display: block;
+  width: 100%;
+  height: 154px;
+}
+
+#banner .title {
+  width: 100%;
+  height: 56px;
+  background: #3e4963;
+  position: absolute;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+}
+
+#banner .title-content {
+  overflow: hidden;
+  color: #fff;
+  font-size: 18px;
+  font-family: tahoma, Arial;
+}
+
 /* Slider */
 
 #slider {
@@ -248,58 +303,6 @@ html {
   width: 100%;
   -webkit-animation: circle 5s infinite linear;
   animation: rotateDots 5s infinite linear;
-}
-
-#banner {
-  background-color: #000;
-  height: 270px;
-  padding: 18px 0;
-  font-size: 18px;
-  margin: 0 auto;
-}
-
-#banner .banner-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
-  list-style: none;
-  padding: 0;
-  z-index: 1;
-}
-
-#banner .banner-item {
-  width: 308px;
-  height: 210px;
-  position: relative;
-  cursor: pointer;
-  overflow: hidden;
-  padding-left: 8px;
-}
-
-#banner .banner-img-item {
-  display: block;
-  width: 100%;
-  height: 154px;
-}
-
-#banner .title {
-  width: 100%;
-  height: 56px;
-  background: #3e4963;
-  position: absolute;
-  padding: 10px 14px;
-  display: flex;
-  align-items: center;
-}
-
-#banner .title-content {
-  overflow: hidden;
-  color: #fff;
-  font-size: 18px;
-  font-family: tahoma, Arial;
 }
 
 #content {
@@ -830,3 +833,20 @@ html {
     transform: translateY(0px);
   }
 }
+
+/* Mobile width < 740px */
+@media (max-width: 740px) {
+  /* header section */
+  #header {
+    overflow: hidden;
+  }
+
+  /* navigation menu */
+  #nav > li {
+    display: block;
+  }
+}
+/* Tablet  >= 740px & < 1024px*/
+@media (min-width: 740px) and (max-width: 1023px) {
+}
+/* PC >= 1024px */
