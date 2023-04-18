@@ -34,11 +34,14 @@
         </ul>
         <!-- End: nav -->
 
-        <!-- Begin: account -->
+        <!-- account icon -->
         <div class="account-btn">
           <i class="account-icon ti-user"></i>
         </div>
-        <!-- End: account -->
+        <!--  Menu icon -->
+        <div id="mobile-menu" class="mobile-menu-btn">
+          <i class="menu-icon ti-menu"></i>
+        </div>
       </div>
       <div id="slider">
         <div class="text-content">
@@ -560,6 +563,26 @@
       });
 
       modalPay.addEventListener("click", showPay);
+    </script>
+
+    <!-- Đóng và mở menu -->
+    <script>
+      // header và mobileMenu lấy dl từ id header và mobile-menu
+      var header = document.getElementById("header");
+      var mobileMenu = document.getElementById("mobile-menu");
+
+      // Biến headerHeight sẽ lấy giá trị hiện tại của Biến header
+      var headerHeight = header.clientHeight;
+
+      // Sub navigation bị ghi đè khi thực hiện sự kiện onclick
+      mobileMenu.onclick = function () {
+        var isClosed = header.clientHeight === headerHeight;
+        if (isClosed) {
+          header.style.height = "auto";
+        } else {
+          header.style.height = null;
+        }
+      };
     </script>
   </body>
 </html>

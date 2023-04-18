@@ -162,22 +162,34 @@ html {
   font-size: 12px;
 }
 
+/* Icon section */
+/* Cả 2 icon đều đc hưởng các thuộc tính bên trong */
+#header .mobile-menu-btn,
 #header .account-btn {
   /* Làm icon sao cho vào bên phải của header và tăng kích thước = padding */
   float: right;
   padding: 0 24px;
 }
 
+/* Cả 2 icon đều đc hưởng các thuộc tính bên trong */
+#header .mobile-menu-btn:hover,
 #header .account-btn:hover {
   background-color: #282f3f;
   cursor: pointer;
 }
 
+/* Cả 2 icon đều đc hưởng các thuộc tính bên trong */
+#header .menu-icon,
 #header .account-icon {
   /* Căn giữa = lineheight */
   line-height: 65px;
   color: #fff;
   font-size: 30px;
+}
+
+/* Ẩn menu icon */
+#header .mobile-menu-btn {
+  display: none;
 }
 
 /* banner section */
@@ -834,17 +846,33 @@ html {
   }
 }
 
-/* Mobile width < 740px */
-@media (max-width: 740px) {
+/* Mobile & Tablet  <= 1024*/
+@media (max-width: 1024px) {
   /* header section */
+  /* Ẩn phần navigation menu trong mobile */
   #header {
     overflow: hidden;
   }
 
+  /* Ẩn account icon  */
+  #header .account-btn {
+    display: none;
+  }
+
+  /* Hiện menu icon */
+  #header .mobile-menu-btn {
+    display: block;
+  }
+
   /* navigation menu */
+  /* Làm navigation menu thành column */
   #nav > li {
     display: block;
   }
+}
+
+/* Mobile width < 740px */
+@media (max-width: 740px) {
 }
 /* Tablet  >= 740px & < 1024px*/
 @media (min-width: 740px) and (max-width: 1023px) {
