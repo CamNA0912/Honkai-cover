@@ -6,6 +6,7 @@
 }
 
 html {
+  scroll-behavior: smooth;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -18,12 +19,72 @@ html {
     3. Màu sắc
     4.Kiểu dáng */
 
+/* Responsive web 
+Pc: >= 1024px
+Tablet: >= 740 & <1024px
+Mobile: < 740px  */
+/* Common */
 .clear {
   clear: both;
 }
 
 .text-white {
   color: #fff !important;
+}
+
+.row {
+  margin-left: -8px;
+}
+
+.row::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.col {
+  float: left;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.col-half {
+  width: 50%;
+}
+
+.col-full {
+  width: 100%;
+}
+
+.col-third {
+  width: 33.33333%;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.mt-8 {
+  margin-top: 8px !important;
+}
+
+.mt-16 {
+  margin-top: 16px !important;
+}
+
+.m-12 {
+  margin-top: 12px !important;
+  margin-bottom: 12px !important;
+}
+
+.width-1280 {
+  width: 1280px !important;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #main {
@@ -38,6 +99,7 @@ html {
   right: 0;
   /* Làm phần header nổi lên khi cho slider thuộc tính relative */
   z-index: 2;
+  overflow: hidden;
 }
 
 #nav {
@@ -45,23 +107,8 @@ html {
   display: inline-block;
 }
 
-#nav .subnav {
-  position: absolute;
-  min-width: 150px;
-  top: 100%;
-  left: 0;
-  background-color: #040b26;
-  list-style-type: none;
-  display: none;
-}
-
-#nav .subnav li:hover {
-  color: #01d6fe;
-  background-color: #282f3f;
-}
-
 #nav > li {
-  display: inline-block;
+  display: block;
 }
 
 #nav li {
@@ -81,7 +128,27 @@ html {
   text-transform: uppercase;
 }
 
-#nav li:hover .subnav {
+#nav .subnav {
+  position: absolute;
+  min-width: 150px;
+  top: 100%;
+  left: 0;
+  background-color: #040b26;
+  list-style-type: none;
+  display: none;
+}
+
+#nav .subnav1 {
+  background-color: #fff;
+  color: #2196f3;
+}
+
+#nav .subnav li:hover {
+  color: #01d6fe;
+  background-color: #282f3f;
+}
+
+#nav .subnav:hover ~ li {
   display: block;
 }
 
@@ -104,17 +171,28 @@ html {
   font-size: 12px;
 }
 
+#header .mobile-menu-btn {
+  /* Tránh thanh menu bị tràng ra ngoài */
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+}
+
+#header .mobile-menu-btn,
 #header .account-btn {
   /* Làm icon sao cho vào bên phải của header và tăng kích thước = padding */
   float: right;
   padding: 0 24px;
 }
 
+#header .mobile-menu-btn:hover,
 #header .account-btn:hover {
   background-color: #282f3f;
   cursor: pointer;
 }
 
+#header .menu-icon,
 #header .account-icon {
   /* Căn giữa = lineheight */
   line-height: 65px;
@@ -134,27 +212,37 @@ html {
 
 #slider .text-content {
   position: absolute;
-  bottom: 47px;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
   /* Cách 1 (căn giữa)*/
   /* left: 50%;
   right: 50%;
   transform: translateX(-50%, -50%); */
   /* Cách 2  131 -> 133*/
-  width: 100%;
-  text-align: center;
-  color: #fff;
+  width: 420px;
+  height: 105px;
+  cursor: pointer;
+  color: #03040a;
   font-size: 32px;
   font-weight: 800;
 }
 
 #slider .text-heading {
-  font-family: tahoma, Arial;
   /* absolute làm cho btn-download có thể di chuyển và gộp vào với text-heading */
   position: absolute;
+  line-height: 105px;
   width: 100%;
-  text-align: center;
-  top: 25px;
-  color: #000;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../img/slider/slider-frame-for-btn.png) no-repeat;
+  background-size: cover;
+  color: #03040a;
+  font-size: 32px;
+  font-weight: 800;
+  font-family: tahoma, Arial;
 }
 
 #banner {
@@ -174,7 +262,6 @@ html {
   overflow: hidden;
   list-style: none;
   padding: 0;
-  z-index: 1;
 }
 
 #banner .banner-item {
@@ -215,13 +302,71 @@ html {
 #content .the-gioi-quan {
   background: url(/asset/img/slider/background-the-gioi-quan.png) center top /
     cover no-repeat;
+  position: relative;
 }
 
 #content .content-section {
-  width: 780px;
+  width: 1280px;
   margin-left: auto;
   margin-right: auto;
   padding: 55px 0;
+}
+
+#content .media-content-section {
+  width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 43px;
+  height: 490px;
+}
+
+#content .media-content-actions {
+  position: absolute;
+  right: 0;
+  top: 43;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  color: #060a25;
+  font-weight: bold;
+  text-align: center;
+}
+
+#content .media-btn.is-active {
+  background-image: url(/asset/img/media-content/frame-active.png);
+}
+
+#content .media-btn {
+  width: 309px;
+  height: 65px;
+  line-height: 65px;
+  background: url(/asset/img/media-content/frame-img.png);
+  background-size: 100%;
+  cursor: pointer;
+}
+
+#content .media-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+#content .media-container > div:first-child {
+  width: 480px;
+  height: 270px;
+}
+
+#content .media-container > div {
+  width: 256px;
+  height: 145px;
+  margin-right: 8px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  border: 3px solid transparent;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
 }
 
 #content .section-heading {
@@ -231,8 +376,38 @@ html {
   font-family: tahoma, Arial;
 }
 
-#content .the-gioi-quan {
+#content .container-the-gioi-quan {
+  margin: 0 auto;
+  width: 1280px;
+  height: 524px;
   position: relative;
+  overflow: hidden;
+}
+
+#content .the-gioi-quan-box {
+  width: 1280px;
+  height: 524px;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: url(/asset/img/slider/Frame-the-gioi-quan-section.png) no-repeat;
+  background-size: cover;
+}
+
+#content .text-box {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  top: 60px;
+  right: 40px;
+  width: 712px;
+  height: 250px;
+  font-size: 18px;
+  color: #000;
+  line-height: 1.3;
+  z-index: 99;
 }
 
 #content .about-text {
@@ -243,7 +418,33 @@ html {
 }
 
 #content .banner-item {
-  margin-top: 48px;
+  position: absolute;
+  bottom: 35px;
+  right: 40px;
+  z-index: 99;
+}
+
+#content .show-more {
+  position: absolute;
+  width: 200px;
+  height: 60px;
+  border: 1px solid #060a25;
+  right: 11px;
+  bottom: 97px;
+  font-size: 24px;
+  color: #060a25;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#content .show-more span {
+  width: 42px;
+  height: 12px;
+  background: url(../img/media-content/arrow-left.png) no-repeat;
+  background-size: 100% 100%;
+  margin-left: 8px;
 }
 
 /* Valkyrie section */
@@ -287,13 +488,12 @@ html {
 /* Emotion */
 
 .emotion-list {
-  margin: 32px -8px 0;
+  margin-top: 32px;
+  margin-bottom: 48px;
 }
 
 .emotion-item {
-  float: left;
   width: 33.33333%;
-  padding: 0 8px;
 }
 
 .emotion-img {
@@ -334,6 +534,8 @@ html {
   display: inline-block;
   margin-top: 15px;
   font-weight: 600;
+  border: none;
+  cursor: pointer;
 }
 
 .emotion-view-btn:hover {
@@ -347,6 +549,39 @@ html {
 .background-media {
   background: url(/asset/img/slider/background-media.png) center top / cover
     no-repeat;
+}
+
+/* Contact form */
+.contact-content {
+  margin-top: 48px;
+}
+
+.contact-info {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.contact-info i[class*="ti-"] {
+  width: 35px;
+  display: inline-block;
+}
+
+.contact-form {
+  font-size: 15px;
+}
+
+.contact-form .form-control {
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.contact-form .form-submit-btn {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #000;
+  padding: 10px 16px;
+  float: right;
 }
 
 #footer {
@@ -400,8 +635,9 @@ html {
   margin: 0 12px 0;
 }
 
-#footer .icon-item:hover {
-  background-color: #fff;
+#footer div .icon-item:hover {
+  background-color: #040b26;
+  color: #fff;
 }
 
 #footer .split-box {
@@ -445,6 +681,38 @@ html {
   margin-bottom: 12px;
 }
 
+.sub-footer {
+  width: 100%;
+  height: 230px;
+  background-color: #000;
+}
+
+.sub-footer .content-section {
+  width: 800px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 43px;
+  height: 230px;
+  padding: 30px 0 40px 0;
+}
+
+.sub-footer .mini-logo img {
+  width: 132px;
+  height: 67px;
+}
+
+.sub-footer .logo img {
+  width: 470px;
+  height: 57px;
+}
+
+.content-section .about-text .footer-link {
+  text-decoration: none;
+  margin: 10px;
+  color: #bbb;
+  font-size: 12px;
+}
+
 .modal {
   position: fixed;
   top: 0;
@@ -452,13 +720,13 @@ html {
   bottom: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.4);
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
 }
 
-.modal {
-  display: none;
+.modal.open {
+  display: flex;
 }
 
 .modal-close {
@@ -477,6 +745,7 @@ html {
   max-width: calc(100% - 32px);
   min-height: 200px;
   position: relative;
+  animation: modalFadeIn ease 1s;
 }
 
 .modal-header {
@@ -536,4 +805,49 @@ html {
 
 .modal-help a {
   color: #2196f3;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-140px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* Mobile & Tablet: width <1024 */
+/* Mobile & Tablet */
+@media screen and (max-width: 63.9375em) {
+  /*Hiện Menu icon */
+  #header .mobile-menu-btn {
+    display: block;
+  }
+
+  /* Ẩn account icon */
+  #header .account-btn {
+    display: none;
+  }
+  #nav > li {
+    display: block;
+  }
+}
+
+/* Tablet >= 740px & < 1024 */
+/* Tablet */
+@media screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+}
+
+/* Mobile < 740px */
+/* Mobile */
+@media screen and (max-width: 46.1875em) {
+  #nav {
+    display: block;
+  }
+
+  #nav > li:first-child {
+    display: inline-block;
+  }
 }
