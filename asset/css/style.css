@@ -453,6 +453,7 @@ html {
   font-size: 18px;
   padding: 5px 0;
   line-height: 1.6; /* Cách dòng trong paragraph */
+  color: #fff;
 }
 
 #content .banner-item {
