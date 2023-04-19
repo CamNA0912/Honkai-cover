@@ -101,6 +101,8 @@ html {
   display: inline-block;
 }
 
+/* Navigation và sub navigation menu */
+
 #nav .subnav {
   position: absolute;
   min-width: 150px;
@@ -130,7 +132,8 @@ html {
   font-weight: 600;
   padding: 0 20px;
   line-height: 65px;
-  display: inline-block;
+  /* Giúp cho thuộc tính kế thừa chiều dài */
+  display: block;
 }
 
 #nav > li > a {
@@ -160,22 +163,91 @@ html {
   font-size: 12px;
 }
 
+/* Icon section */
+/* Cả 2 icon đều đc hưởng các thuộc tính bên trong */
+#header .mobile-menu-btn,
 #header .account-btn {
   /* Làm icon sao cho vào bên phải của header và tăng kích thước = padding */
   float: right;
   padding: 0 24px;
 }
 
+/* Cả 2 icon đều đc hưởng các thuộc tính bên trong */
+#header .mobile-menu-btn:hover,
 #header .account-btn:hover {
   background-color: #282f3f;
   cursor: pointer;
 }
 
+/* Cả 2 icon đều đc hưởng các thuộc tính bên trong */
+#header .menu-icon,
 #header .account-icon {
   /* Căn giữa = lineheight */
   line-height: 65px;
   color: #fff;
   font-size: 30px;
+}
+
+/* Ẩn menu icon */
+#header .mobile-menu-btn {
+  display: none;
+  /* Sửa vị trí trong menu responsive */
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* banner section */
+#banner {
+  background-color: #000;
+  height: 270px;
+  padding: 18px 0;
+  font-size: 18px;
+  margin: 0 auto;
+}
+
+#banner .banner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+}
+
+#banner .banner-item {
+  width: 308px;
+  height: 210px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  padding-left: 8px;
+}
+
+#banner .banner-img-item {
+  display: block;
+  width: 100%;
+  height: 154px;
+}
+
+#banner .title {
+  width: 100%;
+  height: 56px;
+  background: #3e4963;
+  position: absolute;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+}
+
+#banner .title-content {
+  overflow: hidden;
+  color: #fff;
+  font-size: 18px;
+  font-family: tahoma, Arial;
 }
 
 /* Slider */
@@ -248,58 +320,6 @@ html {
   width: 100%;
   -webkit-animation: circle 5s infinite linear;
   animation: rotateDots 5s infinite linear;
-}
-
-#banner {
-  background-color: #000;
-  height: 270px;
-  padding: 18px 0;
-  font-size: 18px;
-  margin: 0 auto;
-}
-
-#banner .banner-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
-  list-style: none;
-  padding: 0;
-  z-index: 1;
-}
-
-#banner .banner-item {
-  width: 308px;
-  height: 210px;
-  position: relative;
-  cursor: pointer;
-  overflow: hidden;
-  padding-left: 8px;
-}
-
-#banner .banner-img-item {
-  display: block;
-  width: 100%;
-  height: 154px;
-}
-
-#banner .title {
-  width: 100%;
-  height: 56px;
-  background: #3e4963;
-  position: absolute;
-  padding: 10px 14px;
-  display: flex;
-  align-items: center;
-}
-
-#banner .title-content {
-  overflow: hidden;
-  color: #fff;
-  font-size: 18px;
-  font-family: tahoma, Arial;
 }
 
 #content {
@@ -830,3 +850,44 @@ html {
     transform: translateY(0px);
   }
 }
+
+/* Mobile & Tablet  <= 1024*/
+@media (max-width: 1024px) {
+  /* header section */
+  /* Ẩn phần navigation menu trong mobile */
+  #header {
+    overflow: hidden;
+  }
+
+  /* Ẩn account icon  */
+  #header .account-btn {
+    display: none;
+  }
+
+  /* Hiện menu icon */
+  #header .mobile-menu-btn {
+    display: block;
+  }
+
+  #nav {
+    display: block;
+  }
+  /* navigation menu */
+  /* Làm navigation menu thành column */
+  #nav > li {
+    display: block;
+  }
+
+  /* Làm cho list của Home chỉ chiếm khoảng cách nhất định */
+  #nav > li:first-child {
+    display: inline-block;
+  }
+}
+
+/* Mobile width < 740px */
+@media (max-width: 740px) {
+}
+/* Tablet  >= 740px & < 1024px*/
+@media (min-width: 740px) and (max-width: 1023px) {
+}
+/* PC >= 1024px */

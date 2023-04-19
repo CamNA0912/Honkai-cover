@@ -16,29 +16,32 @@
       <div id="header">
         <!-- Begin: nav -->
         <ul id="nav">
-          <li><a href="">Home</a></li>
-          <li><a href="">News</a></li>
-          <li><a href="">Valkyrie</a></li>
-          <li><a href="">HoYoLab</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#banner">News</a></li>
+          <li><a href="#valkyrie-section">Valkyrie</a></li>
+          <li><a href="#">HoYoLab</a></li>
           <li>
-            <a href="">
+            <a href="#media">
               Media
               <i class="nav-arrow-down ti-angle-down"></i>
             </a>
             <ul class="subnav">
-              <li><a href="">Video</a></li>
-              <li><a href="">Wallpaper</a></li>
-              <li><a href="">Comic</a></li>
+              <li><a href="#">Video</a></li>
+              <li><a href="#">Wallpaper</a></li>
+              <li><a href="#">Comic</a></li>
             </ul>
           </li>
         </ul>
         <!-- End: nav -->
 
-        <!-- Begin: account -->
+        <!-- account icon -->
         <div class="account-btn">
           <i class="account-icon ti-user"></i>
         </div>
-        <!-- End: account -->
+        <!--  Menu icon -->
+        <div id="mobile-menu" class="mobile-menu-btn">
+          <i class="menu-icon ti-menu"></i>
+        </div>
       </div>
       <div id="slider">
         <div class="text-content">
@@ -112,7 +115,7 @@
           text-box
           banner
          -->
-        <div class="the-gioi-quan">
+        <div id="the-gioi-quan" class="the-gioi-quan">
           <div class="content-section width-1280">
             <h2 class="section-heading">Thế giới quan</h2>
             <div class="container-the-gioi-quan">
@@ -181,7 +184,7 @@
         </div>
 
         <!-- Valkyrie section -->
-        <div class="valkyrie-section">
+        <div id="valkyrie-section" class="valkyrie-section">
           <div class="content-section">
             <h2 class="section-heading text-white">Valkyrie</h2>
             <!-- <p class="about-text text-white">
@@ -265,7 +268,7 @@
         </div>
 
         <!-- Khu trải nghiệm section -->
-        <div class="background-media">
+        <div id="media" class="background-media">
           <div class="content-section">
             <h2 class="section-heading">Khu trải nghiệm</h2>
             <div class="media-content-section">
@@ -560,6 +563,39 @@
       });
 
       modalPay.addEventListener("click", showPay);
+    </script>
+
+    <!-- Đóng và mở menu -->
+    <script>
+      // header và mobileMenu lấy dl từ id header và mobile-menu
+      var header = document.getElementById("header");
+      var mobileMenu = document.getElementById("mobile-menu");
+
+      // Biến headerHeight sẽ lấy giá trị hiện tại của Biến header
+      var headerHeight = header.clientHeight;
+
+      // Sub navigation bị ghi đè khi thực hiện sự kiện onclick trong mobile menu responsive
+      mobileMenu.onclick = function () {
+        var isClosed = header.clientHeight === headerHeight;
+        if (isClosed) {
+          header.style.height = "auto";
+        } else {
+          // ẩn menu ik khi height của header sai
+          header.style.height = null;
+        }
+      };
+
+      // Tự đóng menu khi chọn menu
+      // Biến menuItems sẽ lấy các thẻ li có href = #
+      var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+      for (var i = 0; i < menuItems.length; i++) {
+        var menuItem = menuItems[i];
+        menuItem.onclick = function () {
+          console.log(this);
+          // ẩn navigation menu
+          header.style.height = null;
+        };
+      }
     </script>
   </body>
 </html>
