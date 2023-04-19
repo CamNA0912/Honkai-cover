@@ -882,6 +882,21 @@ html {
   #nav > li:first-child {
     display: inline-block;
   }
+
+  /* Làm cho subnav menu hiện lên */
+  #nav .subnav {
+    position: initial;
+  }
+
+  /* Sửa layout của submenu */
+  #nav .subnav a {
+    padding: 5px 40px;
+  }
+
+  /* Sửa layout của submenu */
+  #nav .subnav li {
+    width: 100%;
+  }
 }
 
 /* Mobile width < 740px */
