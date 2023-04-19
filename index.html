@@ -590,10 +590,20 @@
       var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
       for (var i = 0; i < menuItems.length; i++) {
         var menuItem = menuItems[i];
-        menuItem.onclick = function () {
-          console.log(this);
-          // ẩn navigation menu
-          header.style.height = null;
+
+        menuItem.onclick = function (event) {
+          // Nếu thẻ li có các thẻ nằm liền kề và chứa class subnav thì => true và ngược lại
+          var isParentMenu =
+            this.nextElementSibling &&
+            this.nextElementSibling.classList.contains("subnav");
+          if (isParentMenu) {
+            // Ko cho đóng navigation menu khi thẻ đó có các thẻ nằm liền kề
+            event.preventDefault();
+          } else {
+            console.log(this);
+            // ẩn navigation menu
+            header.style.height = null;
+          }
         };
       }
     </script>
