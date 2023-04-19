@@ -132,7 +132,8 @@ html {
   font-weight: 600;
   padding: 0 20px;
   line-height: 65px;
-  display: inline-block;
+  /* Giúp cho thuộc tính kế thừa chiều dài */
+  display: block;
 }
 
 #nav > li > a {
@@ -190,6 +191,10 @@ html {
 /* Ẩn menu icon */
 #header .mobile-menu-btn {
   display: none;
+  /* Sửa vị trí trong menu responsive */
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 /* banner section */
@@ -864,10 +869,18 @@ html {
     display: block;
   }
 
+  #nav {
+    display: block;
+  }
   /* navigation menu */
   /* Làm navigation menu thành column */
   #nav > li {
     display: block;
+  }
+
+  /* Làm cho list của Home chỉ chiếm khoảng cách nhất định */
+  #nav > li:first-child {
+    display: inline-block;
   }
 }
 
